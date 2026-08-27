@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://sura-delice.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/about</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/menu</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/banquet</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/gallery</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/reviews</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/contact</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/events</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/reservations</loc>
+  </url>
+
+  <url>
+    <loc>https://sura-delice.vercel.app/order-online</loc>
+  </url>
+
+</urlset>

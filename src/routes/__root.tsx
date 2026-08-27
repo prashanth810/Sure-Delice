@@ -41,8 +41,11 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error, {
+      boundary: "tanstack_root_error_component",
+    });
   }, [error]);
 
   return (
@@ -54,6 +57,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
+
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
@@ -64,6 +68,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
+
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
@@ -80,22 +85,60 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "author", content: "Sura Delice Restaurant & Banquets" },
-      { property: "og:site_name", content: "Sura Delice Restaurant & Banquets" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
+      },
+      {
+        name: "author",
+        content: "Sura Delice Restaurant & Banquets",
+      },
+
+      // Google Search Console verification
+      {
+        name: "google-site-verification",
+        content: "W4nVM3rqhzxEAxSruWV0TfmGfmGyI_jIcDCh6578pZ8",
+      },
+
+      {
+        property: "og:site_name",
+        content: "Sura Delice Restaurant & Banquets",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
     ],
+
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: appCss,
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      {
+        rel: "icon",
+        href: "/favicon.ico",
+        type: "image/x-icon",
+      },
     ],
+
     scripts: [
       {
         type: "application/ld+json",
@@ -106,6 +149,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           servesCuisine: ["Indian", "Biryani", "Seafood", "Multi Cuisine"],
           telephone: "+91 98491 92830",
           openingHours: "Mo-Su 12:00-02:00",
+
           address: {
             "@type": "PostalAddress",
             streetAddress: "16-7-390/A, Azampura, Malakpet",
@@ -114,6 +158,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             postalCode: "500024",
             addressCountry: "IN",
           },
+
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.0",
@@ -123,6 +168,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -135,6 +181,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
+
       <body>
         {children}
         <Scripts />
@@ -150,13 +197,16 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
         <Header />
+
         <main className="flex-1 pb-16 md:pb-0">
           {/* Required: nested routes render here. */}
           <Outlet />
         </main>
+
         <Footer />
         <MobileActionBar />
       </div>
+
       <Toaster />
     </QueryClientProvider>
   );
