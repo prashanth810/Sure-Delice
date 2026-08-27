@@ -54,11 +54,7 @@ function ContactPage() {
       <section className="section-y">
         <div className="container-royal grid gap-10 lg:grid-cols-2">
           <div>
-            <SectionHeading
-              align="left"
-              eyebrow="Contact Information"
-              title="Reach Us"
-            />
+            <SectionHeading align="left" eyebrow="Contact Information" title="Reach Us" />
             <ul className="mt-8 space-y-4">
               <Detail icon={MapPin} label="Address" value={restaurant.address} />
               <Detail
@@ -67,11 +63,7 @@ function ContactPage() {
                 value={restaurant.phone}
                 href={restaurant.phoneHref}
               />
-              <Detail
-                icon={Clock}
-                label="Opening Hours"
-                value={`Daily ${restaurant.hours}`}
-              />
+              <Detail icon={Clock} label="Opening Hours" value={`Daily ${restaurant.hours}`} />
             </ul>
           </div>
           <ContactForm />

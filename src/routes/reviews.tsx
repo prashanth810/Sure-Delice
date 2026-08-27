@@ -78,19 +78,14 @@ function ReviewsPage() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {reviewCategories.map((c, i) => (
-              <ReviewCard
-                key={c}
-                category={c}
-                quote={themes[c] ?? ""}
-                delay={(i % 3) * 90}
-              />
+              <ReviewCard key={c} category={c} quote={themes[c] ?? ""} delay={(i % 3) * 90} />
             ))}
           </div>
 
           <Reveal className="mt-12 flex flex-col items-center gap-3 text-center">
             <p className="max-w-xl text-sm text-muted-foreground">
-              Individual guest reviews live on Google, where you can read them in
-              full and add your own.
+              Individual guest reviews live on Google, where you can read them in full and add your
+              own.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button variant="gold" size="lg" asChild>

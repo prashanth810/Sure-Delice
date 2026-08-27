@@ -38,8 +38,7 @@ const options = [
   },
   {
     title: "Online Ordering",
-    description:
-      "Ordering links are being set up — until then, orders are placed over the phone.",
+    description: "Ordering links are being set up — until then, orders are placed over the phone.",
     icon: Smartphone,
   },
 ];
@@ -70,10 +69,7 @@ function OrderOnlinePage() {
 
       <section className="section-y">
         <div className="container-royal">
-          <SectionHeading
-            eyebrow="How To Order"
-            title="Three Ways To Enjoy Our Food"
-          />
+          <SectionHeading eyebrow="How To Order" title="Three Ways To Enjoy Our Food" />
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {options.map((o, i) => (
               <FeatureCard key={o.title} {...o} delay={i * 80} />
@@ -83,9 +79,8 @@ function OrderOnlinePage() {
           <Reveal className="card-royal mx-auto mt-12 max-w-2xl p-8 text-center">
             <h3 className="font-display text-xl text-primary">Order Online</h3>
             <p className="mt-3 text-sm text-muted-foreground">
-              Our online ordering link is not live yet. Place your delivery or
-              takeaway order by calling the restaurant and we will confirm timing
-              right away.
+              Our online ordering link is not live yet. Place your delivery or takeaway order by
+              calling the restaurant and we will confirm timing right away.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Button variant="gold" size="lg" asChild>

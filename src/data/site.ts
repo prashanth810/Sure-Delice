@@ -40,6 +40,12 @@ export const restaurant = {
   mapsQuery: "Sura+Delice+Restaurant+%26+Banquets+Hyderabad",
   rating: "4.0 / 5",
   reviewCount: "1,300+",
+  externalLinks: {
+    eazyDiner:
+      "https://www.eazydiner.com/hyderabad/sura-delice-restaurant-banjara-hills-hyderabad-710699",
+    instagram: "https://www.instagram.com/sura_delice/",
+    zomato: "https://www.zomato.com/hyderabad/sura-delice-banjara-hills",
+  },
   banquet: {
     seated: "Seated dining for groups",
     floating: "Floating receptions & get-togethers",
@@ -71,8 +77,7 @@ export const footerLinks = [
 export const cuisines = [
   {
     title: "Mutton Biryani",
-    description:
-      "Slow-cooked biryani served with raita and salan — a house favourite.",
+    description: "Slow-cooked biryani served with raita and salan — a house favourite.",
     image: images.heroBiryani,
     alt: "Mutton biryani served with raita and salan at Sura Delice",
     tag: "Signature",
@@ -93,8 +98,7 @@ export const cuisines = [
   },
   {
     title: "Buffet Dining",
-    description:
-      "A laid-out buffet spread for family lunches, group dining and events.",
+    description: "A laid-out buffet spread for family lunches, group dining and events.",
     image: images.buffet,
     alt: "Buffet spread laid out at Sura Delice",
     tag: "Buffet",
@@ -274,8 +278,7 @@ export const banquetOccasions = [
 export const banquetFeatures = [
   {
     title: "Banquet & Group Dining",
-    description:
-      "Indoor space for celebrations, family functions and group gatherings.",
+    description: "Indoor space for celebrations, family functions and group gatherings.",
   },
   {
     title: "Long-Table Dining",
@@ -294,8 +297,7 @@ export const banquetFeatures = [
 export const eventTypes = [
   {
     title: "Birthday Celebrations",
-    description:
-      "Celebrate special moments in a warm and festive dining atmosphere.",
+    description: "Celebrate special moments in a warm and festive dining atmosphere.",
     image: images.celebration,
     alt: "Table decorated with balloons for a birthday celebration",
   },
@@ -313,8 +315,7 @@ export const eventTypes = [
   },
   {
     title: "Family Gatherings",
-    description:
-      "Family lunches, family dinners and small family get-togethers.",
+    description: "Family lunches, family dinners and small family get-togethers.",
     image: images.interior,
     alt: "Dining hall arranged for a family gathering",
   },
@@ -343,13 +344,11 @@ export const reviewCategories = [
 export const highlights = [
   {
     title: "Multi Cuisine Kitchen",
-    description:
-      "Biryani, kebabs, seafood, vegetarian dishes and desserts from one kitchen.",
+    description: "Biryani, kebabs, seafood, vegetarian dishes and desserts from one kitchen.",
   },
   {
     title: "Banquet & Group Dining",
-    description:
-      "Celebrations, long-table dining and private gatherings with in-house catering.",
+    description: "Celebrations, long-table dining and private gatherings with in-house catering.",
   },
   {
     title: "Open Till 2 AM",

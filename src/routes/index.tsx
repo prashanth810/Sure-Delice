@@ -84,10 +84,7 @@ function Index() {
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(
-      () => setSlide((s) => (s + 1) % heroSlides.length),
-      5000,
-    );
+    const timer = setInterval(() => setSlide((s) => (s + 1) % heroSlides.length), 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -119,9 +116,7 @@ function Index() {
               aria-current={i === slide}
               onClick={() => setSlide(i)}
               className={`h-2 rounded-full transition-all duration-300 ${
-                i === slide
-                  ? "w-6 bg-[oklch(0.703_0.09_78)]"
-                  : "w-2 bg-white/50 hover:bg-white/80"
+                i === slide ? "w-6 bg-[oklch(0.703_0.09_78)]" : "w-2 bg-white/50 hover:bg-white/80"
               }`}
             />
           ))}
@@ -140,8 +135,8 @@ function Index() {
               Warm Hospitality
             </h1>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80 md:text-lg">
-              Multi-cuisine dining, family favourites and memorable celebrations
-              in a warm and festive setting.
+              Multi-cuisine dining, family favourites and memorable celebrations in a warm and
+              festive setting.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button
@@ -165,7 +160,10 @@ function Index() {
             {/* Rating row */}
             <ul className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-widest text-white/70">
               <li className="flex items-center gap-1.5">
-                <Star className="size-3.5 fill-[oklch(0.703_0.09_78)] text-[oklch(0.703_0.09_78)]" aria-hidden="true" />
+                <Star
+                  className="size-3.5 fill-[oklch(0.703_0.09_78)] text-[oklch(0.703_0.09_78)]"
+                  aria-hidden="true"
+                />
                 {restaurant.rating}
               </li>
               <li className="h-3.5 w-px bg-white/30" aria-hidden="true" />
@@ -223,7 +221,9 @@ function Index() {
                 className="animate-bounce"
               />
             </svg>
-            <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-white/40 group-hover:text-white/70 transition-colors">Scroll</span>
+            <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-white/40 group-hover:text-white/70 transition-colors">
+              Scroll
+            </span>
           </button>
         </div>
       </section>
@@ -237,9 +237,7 @@ function Index() {
                 <s.icon className="size-4" aria-hidden="true" />
               </span>
               <span>
-                <span className="block text-sm font-semibold text-foreground">
-                  {s.title}
-                </span>
+                <span className="block text-sm font-semibold text-foreground">{s.title}</span>
                 <span className="mt-1 block text-xs leading-relaxed text-muted-foreground">
                   {s.text}
                 </span>
@@ -271,14 +269,14 @@ function Index() {
             />
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                Sura Delice is a multi cuisine restaurant and banquet destination
-                — warm interiors, booth seating, long tables for larger groups and
-                service that runs late into the night.
+                Sura Delice is a multi cuisine restaurant and banquet destination — warm interiors,
+                booth seating, long tables for larger groups and service that runs late into the
+                night.
               </p>
               <p>
-                One kitchen serves Mutton Biryani, chicken starters and kebabs,
-                fish and prawns, vegetarian dishes, desserts and buffet dining —
-                for family lunches, office lunches and celebrations alike.
+                One kitchen serves Mutton Biryani, chicken starters and kebabs, fish and prawns,
+                vegetarian dishes, desserts and buffet dining — for family lunches, office lunches
+                and celebrations alike.
               </p>
             </div>
             <div className="mt-8">
@@ -364,11 +362,10 @@ function Index() {
           </Reveal>
           <Reveal delay={90} className="bg-primary px-6 py-12 md:px-12 lg:py-16">
             <p className="eyebrow mb-3 text-primary-foreground/75">Banquet Hall</p>
-            <h2 className="heading-lg text-primary-foreground">
-              Celebrate Your Special Moments
-            </h2>
+            <h2 className="heading-lg text-primary-foreground">Celebrate Your Special Moments</h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-primary-foreground/85">
-              Celebrate special moments in a warm and festive dining atmosphere, with long-table dining, private dining and in-house veg and non-veg catering.
+              Celebrate special moments in a warm and festive dining atmosphere, with long-table
+              dining, private dining and in-house veg and non-veg catering.
             </p>
             <ul className="mt-8 flex flex-wrap gap-2">
               {banquetOccasions.slice(0, 6).map((o) => (

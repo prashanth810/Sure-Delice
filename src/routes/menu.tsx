@@ -69,24 +69,14 @@ function MenuPage() {
           <SectionHeading eyebrow="Full Menu" title="By Course" />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {menuSections.map((section, i) => (
-              <Reveal
-                key={section.id}
-                delay={(i % 2) * 90}
-                className="card-royal p-6 md:p-8"
-              >
-                <h3 className="font-display text-xl text-primary">
-                  {section.title}
-                </h3>
+              <Reveal key={section.id} delay={(i % 2) * 90} className="card-royal p-6 md:p-8">
+                <h3 className="font-display text-xl text-primary">{section.title}</h3>
                 <span className="mt-4 block h-px w-16 bg-gold" />
                 <ul className="mt-5 divide-y divide-border">
                   {section.items.map((item) => (
                     <li key={item.name} className="py-3">
-                      <p className="text-sm font-medium text-foreground">
-                        {item.name}
-                      </p>
-                      <p className="mt-0.5 text-xs text-muted-foreground">
-                        {item.note}
-                      </p>
+                      <p className="text-sm font-medium text-foreground">{item.name}</p>
+                      <p className="mt-0.5 text-xs text-muted-foreground">{item.note}</p>
                     </li>
                   ))}
                 </ul>

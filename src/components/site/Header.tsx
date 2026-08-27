@@ -50,8 +50,7 @@ export function Header() {
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
               activeProps={{
-                className:
-                  "text-white border-b-2 border-[oklch(0.703_0.09_78)] pb-0.5",
+                className: "text-white border-b-2 border-[oklch(0.703_0.09_78)] pb-0.5",
               }}
               inactiveProps={{ className: "text-white/75 border-b-2 border-transparent pb-0.5" }}
               className="px-3 py-1 text-sm font-medium transition-all duration-200 hover:text-white"
@@ -97,7 +96,10 @@ export function Header() {
                     to={l.to}
                     onClick={() => setOpen(false)}
                     activeOptions={{ exact: l.to === "/" }}
-                    activeProps={{ className: "bg-secondary text-primary border-l-2 border-[oklch(0.703_0.09_78)]" }}
+                    activeProps={{
+                      className:
+                        "bg-secondary text-primary border-l-2 border-[oklch(0.703_0.09_78)]",
+                    }}
                     className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
                   >
                     {l.label}

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, ExternalLink, Instagram, MapPin, Phone } from "lucide-react";
 import { footerLinks, mapsDirectionsUrl, restaurant } from "@/data/site";
 
 export function Footer() {
@@ -8,20 +8,15 @@ export function Footer() {
       <div className="container-royal grid gap-10 py-14 md:grid-cols-3 md:py-16">
         <div>
           <p className="font-display text-2xl">{restaurant.name}</p>
-          <p className="mt-2 text-sm text-primary-foreground/70">
-            {restaurant.tagline}
-          </p>
+          <p className="mt-2 text-sm text-primary-foreground/70">{restaurant.tagline}</p>
           <p className="mt-6 text-sm leading-relaxed text-primary-foreground/80">
-            Mutton Biryani, kebabs, seafood, vegetarian dishes and desserts —
-            served in a warm setting, with banquet and group dining for every
-            celebration.
+            Mutton Biryani, kebabs, seafood, vegetarian dishes and desserts — served in a warm
+            setting, with banquet and group dining for every celebration.
           </p>
         </div>
 
         <nav aria-label="Footer">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-            Explore
-          </h2>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Explore</h2>
           <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
             {footerLinks.map((l) => (
               <li key={l.to}>
@@ -37,9 +32,7 @@ export function Footer() {
         </nav>
 
         <div>
-          <h2 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-            Visit Us
-          </h2>
+          <h2 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Visit Us</h2>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/85">
             <li className="flex gap-2">
               <MapPin className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
@@ -56,6 +49,43 @@ export function Footer() {
               Open daily {restaurant.hours}
             </li>
           </ul>
+          <div className="mt-7">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+              Find Us Online
+            </h3>
+            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm">
+              <a
+                href={restaurant.externalLinks.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-primary-foreground/80 transition-colors hover:text-gold"
+                aria-label="Follow Sura Delice on Instagram"
+              >
+                <Instagram className="size-4 text-gold" aria-hidden="true" />
+                Instagram
+              </a>
+              <a
+                href={restaurant.externalLinks.eazyDiner}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-primary-foreground/80 transition-colors hover:text-gold"
+                aria-label="View Sura Delice on EazyDiner"
+              >
+                <ExternalLink className="size-4 text-gold" aria-hidden="true" />
+                EazyDiner
+              </a>
+              <a
+                href={restaurant.externalLinks.zomato}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-primary-foreground/80 transition-colors hover:text-gold"
+                aria-label="View Sura Delice on Zomato"
+              >
+                <ExternalLink className="size-4 text-gold" aria-hidden="true" />
+                Zomato
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
